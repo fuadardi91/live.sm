@@ -115,7 +115,7 @@
         let uploadedBase64 = null;
 
         // Image compression helper to prevent Firestore 1MB document limit overflow
-        window.compressImageBase64 = function(file, maxWidth = 800, quality = 0.65) {
+        window.compressImageBase64 = function(file, maxWidth = 1000, quality = 0.85) {
             return new Promise((resolve, reject) => {
                 const reader = new FileReader();
                 reader.readAsDataURL(file);
